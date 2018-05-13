@@ -1,6 +1,3 @@
-const fs = require('fs');
-
-const cTable = require('console.table');
 
 const _ = require('lodash');
 const _map = require('lodash/map');
@@ -32,7 +29,6 @@ const tests = {
             return item.num
         })
     },
-
 };
 
 Object.entries(tests).forEach(([key, fn]) => {
@@ -40,7 +36,6 @@ Object.entries(tests).forEach(([key, fn]) => {
 });
 
 suite
-// add listeners
     .on('cycle', function(event) {
         console.log(String(event.target));
     })
