@@ -9,29 +9,6 @@ Generate the json data file with 10,000 entries
 $ node gen
 ```
 
-## Base Single Test
-
-```bash
-$ node vs
-```
-
-### Output
-
-```bash
-  name        diffRAM  diffHeapTotal  diffHeapUsed  diffExternal  diffCPU  diffTime
-  ----------  -------  -------------  ------------  ------------  -------  --------
-  native      8        0              85.6484375    0.015625      0.542    1
-  lodash      0        0              81.96875      0             0.715    1
-  lodash/map  4        0              80.8359375    0             0.66     1
-  lodash.map  0        0              80.8359375    0             0.654    0
-
-```
-
-### Remark
-Excluding the initial library load, lodash map uses negligible additional resources and time.
-A single run can vary substantially. A tool like JSPerf runs the test many thousands of times
-to provide a more accurate average.
-
 ## Benchmark
 
 Using [benchmark](https://benchmarkjs.com) for better test results.
@@ -92,3 +69,28 @@ lodash/map x 9,428 ops/sec ±1.23% (89 runs sampled)
 lodash.map x 9,079 ops/sec ±1.24% (86 runs sampled)
 Fastest is lodash/map
 ```
+
+## Base Single Test
+
+Based on the original repo, the Base Single Test was updated before switching to Benchmark.
+
+```bash
+$ node vs
+```
+
+### Output
+
+```bash
+  name        diffRAM  diffHeapTotal  diffHeapUsed  diffExternal  diffCPU  diffTime
+  ----------  -------  -------------  ------------  ------------  -------  --------
+  native      8        0              85.6484375    0.015625      0.542    1
+  lodash      0        0              81.96875      0             0.715    1
+  lodash/map  4        0              80.8359375    0             0.66     1
+  lodash.map  0        0              80.8359375    0             0.654    0
+
+```
+
+### Remark
+Excluding the initial library load, lodash map uses negligible additional resources and time.
+A single run can vary substantially. A tool like JSPerf runs the test many thousands of times
+to provide a more accurate average.
