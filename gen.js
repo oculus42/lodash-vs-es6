@@ -1,5 +1,5 @@
 const fs = require('fs')
-const _path = './j.json'
+const _path = './data.json'
 
 const random = (MIN =0 ,MAX = 10) => Math.floor(Math.random() * Math.floor(MAX)) + MIN;
 

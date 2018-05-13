@@ -1,29 +1,28 @@
 # `_.map()` vs `[].map()`
-It is a resource comparation between `_.map()` and `[].map()`, by headling an json with 10,000 data
+This is a resource comparison between `_.map()` and `[].map()`, handling an object with 10,000 entries.
 
-## Generating json file with 10,000 data
-```
+## Setup
+
+Generate the json data file with 10,000 entries
+
+```bash
 $ node gen
 ```
 
 ## Run test
-```
+
+```bash
 $ node vs
-// name           for.js         _.js
-// -------------  -------------  ------------
-// diffRAM        724            6076
-// diffHeapTotal  0              3152
-// diffHeapUsed   834.4140625    3647.6796875
-// diffExternal   97.6572265625  0
-// diffCPU        4.349          24.695
-// diffTime       5              24
-//
+  name        diffRAM  diffHeapTotal  diffHeapUsed  diffExternal  diffCPU  diffTime
+  ----------  -------  -------------  ------------  ------------  -------  --------
+  native      8        0              85.6484375    0.015625      0.542    1
+  lodash      0        0              81.96875      0             0.715    1
+  lodash/map  4        0              80.8359375    0             0.66     1
+  lodash.map  0        0              80.8359375    0             0.654    0
+
 ```
 
-## Remark 
-`_.map()` uses heavy resource 
- - CPU(6x)
- - RAM(8.5x)
- - time(5x)
- 
- to handle the same amount of data than ES6 `[...].map()`
+## Remark
+Excluding the initial library load, lodash map uses negligible additional resources and time.
+A single run can vary substantially. A tool like JSPerf runs the test many thousands of times
+to provide a more accurate average.
