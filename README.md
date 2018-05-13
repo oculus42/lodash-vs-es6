@@ -22,10 +22,11 @@ $ node bench
 #### Node 10.1.0
 
 ```bash
-native x 22,410 ops/sec ±19.00% (88 runs sampled)
-lodash x 7,771 ops/sec ±0.59% (91 runs sampled)
-lodash/map x 8,863 ops/sec ±1.50% (90 runs sampled)
-lodash.map x 8,950 ops/sec ±1.49% (87 runs sampled)
+native map x 22,775 ops/sec ±19.38% (85 runs sampled)
+lodash x 7,761 ops/sec ±0.86% (88 runs sampled)
+lodash/map x 8,874 ops/sec ±1.32% (92 runs sampled)
+lodash.map x 9,313 ops/sec ±0.97% (90 runs sampled)
+native for x 18,955 ops/sec ±1.23% (94 runs sampled)
 Fastest is native
 ```
 
@@ -74,6 +75,9 @@ Fastest is lodash/map
 
 This suite has been expanded to include the base _.map, loading `lodash/map` and the separate `lodash.map` requirement,
 as well as the original native `Array.prototype.map` and finally a native `for` loop.
+
+The native `for` loop beats everything pretty soundly in versions before 10.1.0,
+so I didn't bother updating the README with that result, as it's more useful where there's competition.
 
 ## Base Single Test
 
