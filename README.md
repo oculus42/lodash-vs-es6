@@ -42,7 +42,7 @@ $ node bench
 
 ### Output
 
-#### 8.11.1
+#### Node 8.11.1
 
 ```bash
 native x 6,672 ops/sec ±1.37% (88 runs sampled)
