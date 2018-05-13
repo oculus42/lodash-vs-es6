@@ -31,9 +31,16 @@ const tests = {
     },
 };
 
-Object.entries(tests).forEach(([key, fn]) => {
-    suite.add(key,fn);
-});
+for (key in tests) {
+    if (tests.hasOwnProperty(key)) {
+        suite.add(key, tests[key]);
+    }
+}
+
+// Switched to above code to test Node 6
+// Object.entries(tests).forEach(([key, fn]) => {
+//     suite.add(key,fn);
+// });
 
 suite
     .on('cycle', function(event) {
