@@ -42,10 +42,32 @@ $ node bench
 
 ### Output
 
+#### 8.11.1
+
+```bash
+native x 6,672 ops/sec ±1.37% (88 runs sampled)
+lodash x 7,595 ops/sec ±1.58% (87 runs sampled)
+lodash/map x 8,490 ops/sec ±1.19% (88 runs sampled)
+lodash.map x 8,566 ops/sec ±1.59% (90 runs sampled)
+Fastest is lodash.map
+```
+
+#### Node 9.8.0
+
 ```bash
 native x 7,092 ops/sec ±0.70% (89 runs sampled)
 lodash x 8,147 ops/sec ±1.11% (87 runs sampled)
 lodash/map x 8,915 ops/sec ±0.78% (87 runs sampled)
 lodash.map x 8,789 ops/sec ±1.02% (87 runs sampled)
 Fastest is lodash/map,lodash.map
+```
+
+#### Node 10.1.0
+
+```bash
+native x 22,410 ops/sec ±19.00% (88 runs sampled)
+lodash x 7,771 ops/sec ±0.59% (91 runs sampled)
+lodash/map x 8,863 ops/sec ±1.50% (90 runs sampled)
+lodash.map x 8,950 ops/sec ±1.49% (87 runs sampled)
+Fastest is native
 ```
