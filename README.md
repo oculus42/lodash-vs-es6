@@ -13,6 +13,11 @@ $ node gen
 
 ```bash
 $ node vs
+```
+
+### Output
+
+```bash
   name        diffRAM  diffHeapTotal  diffHeapUsed  diffExternal  diffCPU  diffTime
   ----------  -------  -------------  ------------  ------------  -------  --------
   native      8        0              85.6484375    0.015625      0.542    1
