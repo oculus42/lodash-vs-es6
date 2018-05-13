@@ -9,7 +9,7 @@ const data = require('./data');
 const suite = new Benchmark.Suite();
 
 const tests = {
-    native: function() {
+    'native map': function() {
         data.map( item => {
             return item.num
         });
@@ -29,6 +29,12 @@ const tests = {
             return item.num
         })
     },
+    'native for': function() {
+        const result = [];
+        for (var i = 0; i < data.length; i++) {
+            result.push(data[i].num);
+        }
+    }
 };
 
 for (key in tests) {
