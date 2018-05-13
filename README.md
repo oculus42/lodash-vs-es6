@@ -70,6 +70,11 @@ lodash.map x 9,079 ops/sec ±1.24% (86 runs sampled)
 Fastest is lodash/map
 ```
 
+### Notes
+
+This suite has been expanded to include the base _.map, loading `lodash/map` and the separate `lodash.map` requirement,
+as well as the original native `Array.prototype.map` and finally a native `for` loop.
+
 ## Base Single Test
 
 Based on the original repo, the Base Single Test was updated before switching to Benchmark.
