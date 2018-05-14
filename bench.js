@@ -34,6 +34,12 @@ const tests = {
         for (var i = 0; i < data.length; i++) {
             result.push(data[i].num);
         }
+    },
+    'fixed for': function() {
+        const result = Array(data.length);
+        for (var i = 0; i < data.length; i++) {
+            result[i] = data[i].num;
+        }
     }
 };
 
