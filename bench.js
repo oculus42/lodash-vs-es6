@@ -62,4 +62,6 @@ suite
         console.log('Fastest is ' + this.filter('fastest').map('name'));
     });
 
+console.log('Node', process.version, 'with', data.length, 'entries');
+
 suite.run();
